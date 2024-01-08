@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import AdSupport
+//import AdSupport
 import Foundation
 
 @objcMembers
@@ -372,7 +372,7 @@ public final class Settings: NSObject, SettingsProtocol, SettingsLogging, _Clien
       if #available(iOS 14, *) {
         return _advertisingTrackingStatus
       } else {
-        return ASIdentifierManager.shared().isAdvertisingTrackingEnabled ? .allowed : .disallowed
+        return  .disallowed
       }
     }
     set {

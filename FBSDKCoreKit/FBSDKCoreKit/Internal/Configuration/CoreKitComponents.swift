@@ -70,8 +70,8 @@ final class CoreKitComponents {
   let serverConfigurationProvider: _ServerConfigurationProviding
   let sessionDataTaskProvider: URLSessionProviding
   let settings: SettingsProtocol & SettingsLogging
-  let skAdNetworkReporter: (_AppEventsReporter & SKAdNetworkReporting)?
-  let skAdNetworkReporterV2: (_AppEventsReporter & SKAdNetworkReporting)?
+//  let skAdNetworkReporter: (_AppEventsReporter & SKAdNetworkReporting)?
+//  let skAdNetworkReporterV2: (_AppEventsReporter & SKAdNetworkReporting)?
   let suggestedEventsIndexer: _SuggestedEventsIndexerProtocol
   let swizzler: _Swizzling.Type
   let timeSpentRecorder: _SourceApplicationTracking & _TimeSpentRecording
@@ -149,8 +149,8 @@ final class CoreKitComponents {
     serverConfigurationProvider: _ServerConfigurationProviding,
     sessionDataTaskProvider: URLSessionProviding,
     settings: SettingsLogging & SettingsProtocol,
-    skAdNetworkReporter: (SKAdNetworkReporting & _AppEventsReporter)?,
-    skAdNetworkReporterV2: (SKAdNetworkReporting & _AppEventsReporter)?,
+//    skAdNetworkReporter: (SKAdNetworkReporting & _AppEventsReporter)?,
+//    skAdNetworkReporterV2: (SKAdNetworkReporting & _AppEventsReporter)?,
     suggestedEventsIndexer: _SuggestedEventsIndexerProtocol,
     swizzler: _Swizzling.Type,
     timeSpentRecorder: _SourceApplicationTracking & _TimeSpentRecording,
@@ -225,8 +225,8 @@ final class CoreKitComponents {
     self.serverConfigurationProvider = serverConfigurationProvider
     self.sessionDataTaskProvider = sessionDataTaskProvider
     self.settings = settings
-    self.skAdNetworkReporter = skAdNetworkReporter
-    self.skAdNetworkReporterV2 = skAdNetworkReporterV2
+//    self.skAdNetworkReporter = skAdNetworkReporter
+//    self.skAdNetworkReporterV2 = skAdNetworkReporterV2
     self.suggestedEventsIndexer = suggestedEventsIndexer
     self.swizzler = swizzler
     self.timeSpentRecorder = timeSpentRecorder
@@ -354,19 +354,19 @@ final class CoreKitComponents {
       aemNetworker = AEMNetworker()
     }
 
-    var skAdNetworkReporter: (_AppEventsReporter & SKAdNetworkReporting)?
-    skAdNetworkReporter = _SKAdNetworkReporter(
-      graphRequestFactory: graphRequestFactory,
-      dataStore: UserDefaults.standard,
-      conversionValueUpdater: SKAdNetwork.self
-    )
+//    var skAdNetworkReporter: (_AppEventsReporter & SKAdNetworkReporting)?
+//    skAdNetworkReporter = _SKAdNetworkReporter(
+//      graphRequestFactory: graphRequestFactory,
+//      dataStore: UserDefaults.standard,
+//      conversionValueUpdater: SKAdNetwork.self
+//    )
 
-    var skAdNetworkReporterV2: (_AppEventsReporter & SKAdNetworkReporting)?
-    skAdNetworkReporterV2 = _SKAdNetworkReporterV2(
-      graphRequestFactory: graphRequestFactory,
-      dataStore: UserDefaults.standard,
-      conversionValueUpdater: SKAdNetwork.self
-    )
+//    var skAdNetworkReporterV2: (_AppEventsReporter & SKAdNetworkReporting)?
+//    skAdNetworkReporterV2 = _SKAdNetworkReporterV2(
+//      graphRequestFactory: graphRequestFactory,
+//      dataStore: UserDefaults.standard,
+//      conversionValueUpdater: SKAdNetwork.self
+//    )
 
     let metaIndexer: _MetadataIndexing = _MetadataIndexer(userDataStore: userDataStore, swizzler: _Swizzler.self)
     let suggestedEventsIndexer: _SuggestedEventsIndexerProtocol = _SuggestedEventsIndexer(
@@ -440,8 +440,8 @@ final class CoreKitComponents {
       serverConfigurationProvider: serverConfigurationProvider,
       sessionDataTaskProvider: URLSession.shared,
       settings: settings,
-      skAdNetworkReporter: skAdNetworkReporter,
-      skAdNetworkReporterV2: skAdNetworkReporterV2,
+//      skAdNetworkReporter: skAdNetworkReporter,
+//      skAdNetworkReporterV2: skAdNetworkReporterV2,
       suggestedEventsIndexer: suggestedEventsIndexer,
       swizzler: _Swizzler.self,
       timeSpentRecorder: timeSpentRecorder,

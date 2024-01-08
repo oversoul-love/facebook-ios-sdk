@@ -20,7 +20,7 @@ import Foundation
 public final class _FBCloseIcon: NSObject {
 
   public func image(size: CGSize) -> UIImage? {
-    image(size: size, primaryColor: .white, secondaryColor: .black, scale: UIScreen.main.scale)
+    image(size: size, primaryColor: .white, secondaryColor: .black, scale: 1)
   }
 
   func image(size: CGSize, primaryColor: UIColor, secondaryColor: UIColor, scale: CGFloat) -> UIImage? {

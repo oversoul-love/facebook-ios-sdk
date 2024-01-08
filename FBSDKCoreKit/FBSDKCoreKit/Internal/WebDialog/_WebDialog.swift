@@ -94,7 +94,7 @@ public final class _WebDialog: NSObject {
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(deviceOrientationDidChangeNotification(_:)),
-      name: UIDevice.orientationDidChangeNotification,
+      name: .init("Observer"),
       object: nil
     )
   }
@@ -111,7 +111,7 @@ public final class _WebDialog: NSObject {
   }
 
   func removeObservers() {
-    NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    NotificationCenter.default.removeObserver(self, name: .init("Observer"), object: nil)
   }
 
   func cancel() {
@@ -217,20 +217,21 @@ public final class _WebDialog: NSObject {
   }
 
   func applicationFrameForOrientation() -> CGRect {
-    var applicationFrame = dialogView?.window?.screen.bounds
+    var applicationFrame = CGRect(x: 0, y: 0, width: 500, height: 500)
     guard var insets = dialogView?.window?.safeAreaInsets else {
       return .zero
     }
 
-    if insets.top == 0 {
-      insets.top = UIApplication.shared.statusBarFrame.size.height
-    }
+//    if insets.top == 0 {
+//      insets.top = UIApplication.shared.statusBarFrame.size.height
+//    }
 
-    applicationFrame?.origin.x += insets.left
-    applicationFrame?.origin.y += insets.top
-    applicationFrame?.size.width -= insets.left + insets.right
-    applicationFrame?.size.height -= insets.top + insets.bottom
-    return applicationFrame ?? .zero
+//    applicationFrame?.origin.x += insets.left
+//    applicationFrame?.origin.y += insets.top
+//    applicationFrame?.size.width -= insets.left + insets.right
+//    applicationFrame?.size.height -= insets.top + insets.bottom
+//    return applicationFrame ?? .zero
+    return applicationFrame
   }
 
   func updateView(

@@ -123,7 +123,7 @@ public final class _BridgeAPI: NSObject,
 
     // Disable dismissing with edge pan gesture
     safariController.modalPresentationStyle = .overFullScreen
-    safariController.delegate = self
+//    safariController.delegate = self
     container.displayChildController(safariController)
     parent.present(container, animated: true)
   }
@@ -379,7 +379,7 @@ extension _BridgeAPI {
       application,
       open: launchedURL,
       sourceApplication: sourceApplication,
-      annotation: launchOptions?[UIApplication.LaunchOptionsKey.annotation]
+      annotation: nil
     )
   }
 }
@@ -513,6 +513,7 @@ extension _BridgeAPI {
 @available(iOS 13, *)
 extension _BridgeAPI: ASWebAuthenticationPresentationContextProviding {
   public func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-    UIApplication.shared.keyWindow ?? ASPresentationAnchor()
+//    UIApplication.shared.keyWindow ?? ASPresentationAnchor()
+    ASPresentationAnchor()
   }
 }

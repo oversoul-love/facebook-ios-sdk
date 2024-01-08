@@ -66,8 +66,8 @@ private extension CoreKitConfigurator {
     if #available(iOS 14, *) {
       AEMReporter.configure(
         networker: components.aemNetworker,
-        appID: components.settings.appID,
-        reporter: components.skAdNetworkReporter
+        appID: components.settings.appID
+//        reporter: components.skAdNetworkReporter
       )
     }
   }
@@ -319,8 +319,8 @@ private extension CoreKitConfigurator {
     AppEvents.shared.configureNonTVComponents(
       onDeviceMLModelManager: components.modelManager,
       metadataIndexer: components.metadataIndexer,
-      skAdNetworkReporter: components.skAdNetworkReporter,
-      skAdNetworkReporterV2: components.skAdNetworkReporterV2,
+//      skAdNetworkReporter: components.skAdNetworkReporter,
+//      skAdNetworkReporterV2: components.skAdNetworkReporterV2,
       codelessIndexer: components.codelessIndexer,
       swizzler: components.swizzler,
       aemReporter: components.aemReporter

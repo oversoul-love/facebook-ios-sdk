@@ -85,12 +85,12 @@ NS_SWIFT_NAME(configure(gateKeeperManager:appEventsConfigurationProvider:serverC
 // UNCRUSTIFY_FORMAT_OFF
 - (void)configureNonTVComponentsWithOnDeviceMLModelManager:(id<FBSDKEventProcessing>)modelManager
                                            metadataIndexer:(id<FBSDKMetadataIndexing>)metadataIndexer
-                                       skAdNetworkReporter:(nullable id<FBSDKAppEventsReporter>)skAdNetworkReporter
-                                       skAdNetworkReporterV2:(nullable id<FBSDKAppEventsReporter>)skAdNetworkReporterV2
+//                                       skAdNetworkReporter:(nullable id<FBSDKAppEventsReporter>)skAdNetworkReporter
+//                                       skAdNetworkReporterV2:(nullable id<FBSDKAppEventsReporter>)skAdNetworkReporterV2
                                            codelessIndexer:(Class<FBSDKCodelessIndexing>)codelessIndexer
                                                   swizzler:(Class<FBSDKSwizzling>)swizzler
                                                aemReporter:(Class<FBSDKAEMReporter>)aemReporter
-NS_SWIFT_NAME(configureNonTVComponents(onDeviceMLModelManager:metadataIndexer:skAdNetworkReporter:skAdNetworkReporterV2:codelessIndexer:swizzler:aemReporter:));
+NS_SWIFT_NAME(configureNonTVComponents(onDeviceMLModelManager:metadataIndexer:codelessIndexer:swizzler:aemReporter:));
 // UNCRUSTIFY_FORMAT_ON
 
 #endif

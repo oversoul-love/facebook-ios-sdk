@@ -88,13 +88,13 @@ public final class AEMReporter: NSObject {
 
   public static func configure(
     networker: AEMNetworking?,
-    appID: String?,
-    reporter: SKAdNetworkReporting?
+    appID: String?
+//    reporter: SKAdNetworkReporting?
   ) {
     configure(
       networker: networker,
       appID: appID,
-      reporter: reporter,
+//      reporter: reporter,
       analyticsAppID: nil
     )
   }
@@ -102,13 +102,13 @@ public final class AEMReporter: NSObject {
   private static func configure(
     networker: AEMNetworking?,
     appID: String?,
-    reporter: SKAdNetworkReporting?,
+//    reporter: SKAdNetworkReporting?,
     analyticsAppID: String?
   ) {
     configure(
       networker: networker,
       appID: appID,
-      reporter: reporter,
+//      reporter: reporter,
       analyticsAppID: analyticsAppID,
       store: UserDefaults.standard
     )
@@ -117,13 +117,13 @@ public final class AEMReporter: NSObject {
   public static func configure(
     networker: AEMNetworking?,
     appID: String?,
-    reporter: SKAdNetworkReporting?,
+//    reporter: SKAdNetworkReporting?,
     analyticsAppID: String?,
     store: DataPersisting?
   ) {
     Self.networker = networker
     Self.appID = appID
-    Self.reporter = reporter
+//    Self.reporter = reporter
     Self.analyticsAppID = analyticsAppID
     Self.dataStore = store
   }

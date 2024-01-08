@@ -39,8 +39,9 @@ public final class FBProfilePictureView: UIView {
 
   var currentState: ProfilePictureViewState {
     let shouldImageFit = shouldImageFit()
-    let screen = window?.screen ?? UIScreen.main
-    let scale = screen.scale
+//    let screen = window?.screen ?? UIScreen.main
+//    let scale = screen.scale
+    let scale:CGFloat = 1
     let imageSize = getImageSize(imageShouldFit: shouldImageFit, scale: scale)
     return ProfilePictureViewState(
       profileID: profileID,
